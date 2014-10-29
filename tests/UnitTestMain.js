@@ -102,6 +102,26 @@ setTimeout(function() {
     restClientTestCase.testStatusesUpdateWithMedia();
 }, 32000);
 
+setTimeout(function() {
+    console.log('RestClient.testFriendsIds');
+    restClientTestCase.testFriendsIds();
+},34000);
+
+setTimeout(function() {
+    console.log('RestClient.testFriendsList');
+    restClientTestCase.testFriendsList();
+},36000);
+
+setTimeout(function() {
+    console.log('RestClient.testUsersLookup'); 
+    restClientTestCase.testUsersLookup();
+},38000);
+
+setTimeout(function() {
+    console.log('RestClient.testApplicationRateLimitStatus'); 
+    restClientTestCase.testApplicationRateLimitStatus();
+},40000);
+
 // Search API
 
 var searchClientTestCase = new SearchClientTestCase(oAuthCredentials);
@@ -112,6 +132,5 @@ searchClientTestCase.testCreate();
 setTimeout(function() {
     console.log('SearchClient.testSearch');
     searchClientTestCase.testSearch();
-}, 34000);
-
+}, 42000);
 
