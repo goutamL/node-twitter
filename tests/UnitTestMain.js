@@ -124,8 +124,12 @@ restClientTestCase.testCreate();
 //     restClientTestCase.testFriendsList();
 // },38000);
 
-setTimeout(function() {
-    console.log('RestClient.testUsersLookup'); 
-    restClientTestCase.testUsersLookup();
-},00);
+// setTimeout(function() {
+//     console.log('RestClient.testUsersLookup'); 
+//     restClientTestCase.testUsersLookup();
+// },00);
 
+setTimeout(function() {
+    console.log('RestClient.testApplicationRateLimitStatus'); 
+    restClientTestCase.testApplicationRateLimitStatus();
+},00);

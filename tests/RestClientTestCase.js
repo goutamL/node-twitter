@@ -229,7 +229,7 @@ RestClientTestCase.prototype.testFriendsIds = function()
 
 RestClientTestCase.prototype.testFriendsList = function()
 {
-    this._twitterRestClient.friendsList({}, function(error, result) {
+    this._twitterRestClient.friendsList({'count':20,'cursor':'-1'}, function(error, result) {
         assert.ifError(error);
         assert.deepEqual(typeof(result), 'object');
 	result.users.forEach(function(element,index,fullArray) {
@@ -253,6 +253,18 @@ RestClientTestCase.prototype.testUsersLookup = function()
 	result.forEach(function(element,index,fullArray) {
 	    console.log(element.screen_name)
 	})
+    });
+};
+
+RestClientTestCase.prototype.testApplicationRateLimitStatus = function()
+{
+    this._twitterRestClient.applicationRateLimitStatus({}, function(error, result) {
+        assert.ifError(error);
+        assert.deepEqual(typeof(result), 'object');
+        console.log(result.rate_limit_context)
+        console.log(result.resources.users)
+        console.log(result.resources.statuses)
+        console.log(result.resources.help)
     });
 };
 
