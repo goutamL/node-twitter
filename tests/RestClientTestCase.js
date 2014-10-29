@@ -215,4 +215,28 @@ RestClientTestCase.prototype.testStatusesUpdateWithMedia = function()
     });
 };
 
+
+RestClientTestCase.prototype.testFriendsIds = function()
+{
+    this._twitterRestClient.friendsIds({}, function(error, result) {
+        assert.ifError(error);
+        assert.deepEqual(typeof(result), 'object');
+	result.ids.forEach(function(element,index,fullArray) {
+	    console.log(element)
+	})
+    });
+};
+
+RestClientTestCase.prototype.testFriendsList = function()
+{
+    this._twitterRestClient.friendsList({}, function(error, result) {
+        assert.ifError(error);
+        assert.deepEqual(typeof(result), 'object');
+	result.users.forEach(function(element,index,fullArray) {
+	    console.log(element.screen_name)
+	})
+    });
+};
+
+
 module.exports = RestClientTestCase;
