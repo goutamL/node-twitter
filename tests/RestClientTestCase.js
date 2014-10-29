@@ -238,5 +238,23 @@ RestClientTestCase.prototype.testFriendsList = function()
     });
 };
 
+RestClientTestCase.prototype.testUsersLookup = function()
+{
+    this._twitterRestClient.usersLookup({'user_id':'783214,6253282'}, function(error, result) {
+        assert.ifError(error);
+        assert.deepEqual(typeof(result), 'object');
+	result.forEach(function(element,index,fullArray) {
+	    console.log(element.name)
+	})
+    });
+    this._twitterRestClient.usersLookup({'screen_name':'twitterapi,twitter'}, function(error, result) {
+        assert.ifError(error);
+        assert.deepEqual(typeof(result), 'object');
+	result.forEach(function(element,index,fullArray) {
+	    console.log(element.screen_name)
+	})
+    });
+};
+
 
 module.exports = RestClientTestCase;

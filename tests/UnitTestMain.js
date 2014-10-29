@@ -14,10 +14,10 @@ var restClientTestCase = new RestClientTestCase(oAuthCredentials);
 restClientTestCase.setUp();
 restClientTestCase.testCreate();
 
-setTimeout(function() {
-    console.log('RestClient.testStatusesHomeTimeline');
-    restClientTestCase.testStatusesHomeTimeline();
-}, 0);
+// setTimeout(function() {
+//     console.log('RestClient.testStatusesHomeTimeline');
+//     restClientTestCase.testStatusesHomeTimeline();
+// }, 0);
 
 // setTimeout(function() {
 //     console.log('RestClient.testStatusesMentions');
@@ -54,10 +54,10 @@ setTimeout(function() {
 //     restClientTestCase.testStatusesRetweetsOfMe();
 // }, 14000);
 
-setTimeout(function() {
-    console.log('RestClient.testStatusesUserTimeline');
-    restClientTestCase.testStatusesUserTimeline();
-}, 16000);
+// setTimeout(function() {
+//     console.log('RestClient.testStatusesUserTimeline');
+//     restClientTestCase.testStatusesUserTimeline();
+// }, 16000);
 
 // setTimeout(function() {
 //     console.log('RestClient.testStatusesRetweetedBy');
@@ -74,15 +74,15 @@ setTimeout(function() {
 //     restClientTestCase.testStatusesRetweets();
 // }, 22000);
 
-setTimeout(function() {
-    console.log('RestClient.testStatusesShow');
-    restClientTestCase.testStatusesShow();
-}, 24000);
+// setTimeout(function() {
+//     console.log('RestClient.testStatusesShow');
+//     restClientTestCase.testStatusesShow();
+// }, 24000);
 
-setTimeout(function() {
-    console.log('RestClient.testStatusesOEmbed');
-    restClientTestCase.testStatusesOEmbed();
-}, 26000);
+// setTimeout(function() {
+//     console.log('RestClient.testStatusesOEmbed');
+//     restClientTestCase.testStatusesOEmbed();
+// }, 26000);
 
 // // Tests create and delete of a tweet.
 // setTimeout(function() {
@@ -114,13 +114,18 @@ setTimeout(function() {
 //     searchClientTestCase.testSearch();
 // }, 34000);
 
-setTimeout(function() {
-    console.log('RestClient.testFriendsIds');
-    restClientTestCase.testFriendsIds();
-},27000);
+// setTimeout(function() {
+//     console.log('RestClient.testFriendsIds');
+//     restClientTestCase.testFriendsIds();
+// },36000);
+
+// setTimeout(function() {
+//     console.log('RestClient.testFriendsList');
+//     restClientTestCase.testFriendsList();
+// },38000);
 
 setTimeout(function() {
-    console.log('RestClient.testFriendsList');
-    restClientTestCase.testFriendsList();
-},271000);
+    console.log('RestClient.testUsersLookup'); 
+    restClientTestCase.testUsersLookup();
+},00);
 
