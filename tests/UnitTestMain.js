@@ -2,10 +2,10 @@ var RestClientTestCase = require('./RestClientTestCase');
 var SearchClientTestCase = require('./SearchClientTestCase');
 
 var oAuthCredentials = {
-    consumerKey: 'CONSUMER_KEY',
-    consumerSecret: 'CONSUMER_SECRET',
-    token: 'TOKEN',
-    tokenSecret: 'TOKEN_SECRET'
+    consumerKey: process.env.TWITTER_CONSUMER_KEY,//'CONSUMER_KEY',
+    consumerSecret: process.env.TWITTER_CONSUMER_SECRET,//'CONSUMER_SECRET',
+    token: process.env.TWITTER_ACCESS_TOKEN_KEY,//'TOKEN',
+    tokenSecret: process.env.TWITTER_ACCESS_TOKEN_SECRET//'TOKEN_SECRET'
 };
 
 // REST API
@@ -133,4 +133,3 @@ setTimeout(function() {
     console.log('SearchClient.testSearch');
     searchClientTestCase.testSearch();
 }, 42000);
-
